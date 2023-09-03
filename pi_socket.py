@@ -39,7 +39,7 @@ def start_client():
     server_sock = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
     server_sock.bind((server_addr, server_port))
     server_sock.listen(1)
-    server_sock.settimeout(10)
+    server_sock.settimeout(10000)
     sock, address = server_sock.accept()
     print("Connected")
     server_sock.settimeout(None)
